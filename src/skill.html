@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ステータス設定</title>
+    <style>
+      body {
+        text-align: center;
+        width: 220px;
+      }
+
+      hr {
+        margin-bottom: 8px;
+        margin-top: 8px;
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+      }
+      h3 {
+        margin: 7px 0px;
+      }
+      .effect {
+        position: relative;
+        padding: 1rem 2rem;
+        text-align: center;
+        border: 3px solid #000;
+        border-radius: 0 10px 10px 10px;
+      }
+
+      .effect:before {
+        font-size: 10px;
+        position: absolute;
+        top: -24px;
+        left: -3px;
+        height: 24px;
+        padding: 0px 24px 10px 24px;
+        content: 'POINT';
+        color: #fff;
+        border-radius: 10px 10px 0 0;
+        background: #000;
+      }
+      .box {
+        width: 200px; /* 横幅を200pxに指定 */
+        height: 200px; /* 横幅を200pxに指定 */
+        border: 1px solid #000; /* わかりやすくボーダーを引く */
+        overflow-y: scroll; /* 縦方向にスクロール可能にする */
+        margin: auto; /* 要素を真ん中に移動する */
+      }
+      /* アコーディオンメニュー */
+      details {
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        padding: 0.5em 0.5em 0;
+        margin: 0px 3px 3px;
+      }
+
+      summary {
+        font-weight: bold;
+        margin: -0.5em -0.5em 0;
+        padding: 0.5em;
+        text-align: left;
+      }
+
+      details[open] {
+        padding: 0.5em;
+      }
+
+      details[open] summary {
+        border-bottom: 1px solid #aaa;
+        margin-bottom: 0.5em;
+      }
+      .box1 {
+        /*【div】囲み枠部分*/
+        position: relative; /*必須*/
+        margin: 30px 1px 10px; /*外側の余白*/
+        padding: 3px; /*内側の余白*/
+        border: 5px solid #aaa; /*枠線）*/
+        background: #eee; /*背景色*/
+        color: #555; /*テキスト色*/
+      }
+      .box1 .box-title {
+        /*【span】タイトル部分*/
+        position: absolute; /*必須*/
+        top: -25px; /*囲み枠の上を基準として外側（上）に40px移動*/
+        left: -5px; /*囲み枠の左を基準として内側（右）に12px移動*/
+        line-height: 20px; /*行の高さ*/
+        padding: 0 16px; /*左右の余白*/
+        background: #aaa; /*背景色*/
+        border-radius: 5px 5px 0 0; /*角丸（左上5px 右上5px 右下0 左下0）*/
+        color: #fff; /*テキスト色*/
+        font-weight: bold; /*フォント太字*/
+        font-size: 120%; /*フォントサイズ変更*/
+        text-shadow: 2px 2px 5px #555; /*テキストに影を付ける*/
+      }
+      .box1 p {
+        /*【p】本文部分*/
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="body">
+      <h1>スキル選択</h1>
+      <div id="SubmitSkill" class="box">
+        <h3>設定中のスキル</h3>
+        <hr />
+      </div>
+      <hr />
+      <div id="SkillList" class="box">
+        <h3>スキルリスト</h3>
+        <hr />
+      </div>
+      <hr />
+      <button id="mainpage">メインページに戻る</button>
+    </div>
+    <script src="./js/skill.js" type="module"></script>
+    <script src="./js/global.js" type="module"></script>
+  </body>
+</html>

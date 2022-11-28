@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ステータス設定</title>
+    <style>
+      body {
+        text-align: center;
+        width: 220px;
+      }
+
+      hr {
+        margin-bottom: 8px;
+        margin-top: 8px;
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>ステータス割り振り</h1>
+    <h3>残りポイント：<span id="point">null</span></h3>
+    <p>HP: <span id="hp">null</span> <button id="addhp">+</button></p>
+    <p>ATK: <span id="atk">null</span> <button id="addatk">+</button></p>
+    <p>DEF: <span id="def">null</span> <button id="adddef">+</button></p>
+    <p>SPD: <span id="spd">null</span> <button id="addspd">+</button></p>
+    <hr />
+    <button id="mainpage">メインページに戻る</button>
+    <script src="./js/status.js" type="module"></script>
+  </body>
+</html>

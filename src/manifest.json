@@ -1,0 +1,15 @@
+{
+    "name": "chrome RPG",
+    "version": "0.0.1",
+    "version_name": "0.0.1",
+    "manifest_version": 3,
+    "description": "ブラウザ上で遊べるRPG",
+    "permissions": ["storage", "unlimitedStorage"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_title": "ゲーム画面を開く",
+      "default_popup": "index.html"
+    }
+  }

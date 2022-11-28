@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>装備</title>
+    <style>
+      body {
+        text-align: center;
+        width: 280px;
+      }
+
+      hr {
+        margin-bottom: 8px;
+        margin-top: 8px;
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+      }
+
+      /*tabの形状*/
+      .tab {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-left: 10px;
+      }
+
+      .tab li a {
+        display: block;
+        background: #ddd;
+        margin: 0 2px;
+        padding: 10px 10px;
+      }
+
+      /*liにactiveクラスがついた時の形状*/
+      .tab li.active a {
+        background: #fff;
+      }
+
+      /*エリアの表示非表示と形状*/
+      .area {
+        display: none;
+        /*はじめは非表示*/
+        opacity: 0;
+        /*透過0*/
+        background: #fff;
+        padding: 1px 10px 10px 10px;
+      }
+
+      /*areaにis-activeというクラスがついた時の形状*/
+      .area.is-active {
+        display: block;
+        /*表示*/
+        animation-name: displayAnime;
+        /*ふわっと表示させるためのアニメーション*/
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes displayAnime {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0px;
+        display: table;
+      }
+
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+
+      .wrapper {
+        width: 100%;
+        max-width: 960px;
+        margin: 30px auto;
+        background: #fefefe;
+      }
+
+      .area h2 {
+        font-size: 1.3rem;
+        margin: 1px 0px 0px 0px;
+      }
+
+      .area li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        margin: 60px auto 40px;
+      }
+
+      th {
+        background: #a7a1a1;
+        border: solid 1px #ccc;
+        color: #fff;
+        padding: 10px;
+      }
+
+      td {
+        border: solid 1px #ccc;
+        padding: 10px;
+      }
+      table {
+        margin: auto;
+      }
+      .nowEquipment th {
+        background: #a7a1a1;
+        border: solid 1px #ccc;
+        color: #fff;
+        padding: 5px;
+      }
+      .nowEquipment td {
+        border: solid 1px #ccc;
+        padding: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>装備</h1>
+    <hr />
+    <ul class="tab">
+      <li><button href="#Helmet" id="helmet">頭</button></li>
+      <li><button style="margin-left: 10px" href="#Chestplate" id="chestplate">胸当て</button></li>
+      <li><button style="margin-left: 10px" href="#Boots" id="boots">ブーツ</button></li>
+      <li><button style="margin-left: 10px" href="#Weapon" id="weapon">武器</button></li>
+      <br />
+      <li><button style="margin-top: 10px" href="#Accessory" id="accessory">アクセサリー</button></li>
+    </ul>
+    <hr />
+    <div id="Helmet" class="area">
+      <h2>頭</h2>
+      <table class="nowEquipment">
+        <thead>
+          <tr>
+            <th>装備中の防具</th>
+          </tr>
+          <td>aaa</td>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <hr />
+      <h3>装備する</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>アイテム名</th>
+            <th>個数</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <!--/area-->
+    </div>
+    <div id="Chestplate" class="area">
+      <h2>胸当て</h2>
+      <table class="nowEquipment">
+        <thead>
+          <tr>
+            <th>装備中の防具</th>
+          </tr>
+          <td></td>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <hr />
+      <h3>装備する</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>アイテム名</th>
+            <th>個数</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <!--/area-->
+    </div>
+    <div id="Boots" class="area">
+      <h2>ブーツ</h2>
+      <table class="nowEquipment">
+        <thead>
+          <tr>
+            <th>装備中の防具</th>
+          </tr>
+          <td></td>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <hr />
+      <h3>装備する</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>アイテム名</th>
+            <th>個数</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <!--/area-->
+    </div>
+    <div id="Weapon" class="area">
+      <h2>武器</h2>
+      <table class="nowEquipment">
+        <thead>
+          <tr>
+            <th>装備中の武器</th>
+          </tr>
+          <td></td>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <hr />
+      <h3>装備する</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>アイテム名</th>
+            <th>個数</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <!--/area-->
+    </div>
+    <div id="Accessory" class="area">
+      <h2>アクセサリー</h2>
+      <table class="nowEquipment">
+        <thead>
+          <tr>
+            <th>装備中のアクセサリー</th>
+          </tr>
+          <td></td>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <hr />
+      <h3>装備する</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>アイテム名</th>
+            <th>個数</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <!--/area-->
+    </div>
+
+    <hr />
+    <button id="mainpage">メインページに戻る</button>
+    <script src="./js/equipment.js" type="module"></script>
+    <!-- <script src="./js/global.js"></script> -->
+    <script src="./jquery-3.6.1.min.js"></script>
+  </body>
+</html>

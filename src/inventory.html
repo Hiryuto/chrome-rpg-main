@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>インベントリ</title>
+    <style>
+      body {
+        text-align: center;
+        width: 280px;
+      }
+
+      hr {
+        margin-bottom: 8px;
+        margin-top: 8px;
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+      }
+
+      /*tabの形状*/
+      .tab {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-left: 10px;
+      }
+
+      .tab li a {
+        display: block;
+        background: #ddd;
+        margin: 0 2px;
+        padding: 10px 10px;
+      }
+
+      /*liにactiveクラスがついた時の形状*/
+      .tab li.active a {
+        background: #fff;
+      }
+
+      /*エリアの表示非表示と形状*/
+      .area {
+        display: none;
+        /*はじめは非表示*/
+        opacity: 0;
+        /*透過0*/
+        background: #fff;
+        padding: 10px 10px;
+      }
+
+      /*areaにis-activeというクラスがついた時の形状*/
+      .area.is-active {
+        display: block;
+        /*表示*/
+        animation-name: displayAnime;
+        /*ふわっと表示させるためのアニメーション*/
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes displayAnime {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0px;
+        display: table;
+      }
+
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+
+      .wrapper {
+        width: 100%;
+        max-width: 960px;
+        margin: 30px auto;
+        background: #fefefe;
+      }
+
+      .area h2 {
+        font-size: 1.3rem;
+        margin: 5px 0px 0px 0px;
+      }
+
+      .area li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        margin: 60px auto 40px;
+      }
+
+      th {
+        background: #a7a1a1;
+        border: solid 1px #ccc;
+        color: #fff;
+        padding: 10px;
+      }
+
+      td {
+        border: solid 1px #ccc;
+        padding: 10px;
+      }
+      table {
+        margin: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>持ち物</h1>
+    <ul class="tab">
+      <li><button href="#item" id="items">アイテム</button></li>
+      <li><button style="margin-left: 10px" href="#weapon" id="weapons">武器</button></li>
+      <li><button style="margin-left: 10px" href="#armor" id="armors">防具</button></li>
+      <li><button style="margin-left: 10px" href="#other" id="others">その他</button></li>
+    </ul>
+
+    <div id="item" class="area">
+      <h2>アイテム</h2>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>アイテム名</th>
+            <th>個数</th>
+            <th>売却値</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <!--/area-->
+    </div>
+    <div id="weapon" class="area">
+      <h2>武器</h2>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>アイテム名</th>
+            <th>個数</th>
+            <th>売却値</th>
+          </tr>
+        </thead>
+      </table>
+
+      <!--/area-->
+    </div>
+    <div id="armor" class="area">
+      <h2>防具</h2>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>アイテム名</th>
+            <th>個数</th>
+            <th>売却値</th>
+          </tr>
+        </thead>
+      </table>
+
+      <!--/area-->
+    </div>
+
+    <div id="other" class="area">
+      <h2>その他</h2>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>アイテム名</th>
+            <th>個数</th>
+            <th>売却値</th>
+          </tr>
+        </thead>
+      </table>
+
+      <!--/area-->
+    </div>
+    <hr />
+    <button id="mainpage">メインページに戻る</button>
+    <script src="./jquery-3.6.1.min.js"></script>
+    <script src="./js/inventory.js" type="module"></script>
+  </body>
+</html>

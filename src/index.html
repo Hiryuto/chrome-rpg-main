@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>メインメニュー</title>
+    <style>
+      body {
+        text-align: center;
+        width: 205px;
+      }
+
+      hr {
+        margin-bottom: 8px;
+        margin-top: 8px;
+      }
+
+      div#main h2,
+      h3 {
+        margin: 0px;
+      }
+
+      .box {
+        position: relative;
+        margin: 2em 0;
+        padding: 0.5em 1em;
+        border: solid 2px #000000;
+        border-radius: 8px;
+      }
+
+      .box .box-title {
+        position: absolute;
+        display: inline-block;
+        top: -13px;
+        left: 10px;
+        padding: 7px 9px 0px 5px;
+        line-height: 1;
+        font-size: 10px;
+        background: #fff;
+        color: #000000;
+        font-weight: bold;
+      }
+
+      .box p {
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Chrome RPG</h1>
+    <div id="main">
+      <div id="status">
+        <h2>Level:<span id="level">loading...</span></h2>
+        <h2>Exp:<span id="exp">loading...</span></h2>
+        <h2>Coin: <span id="coin">loading...</span></h2>
+        <div class="box">
+          <span class="box-title">パラメーター</span>
+          <p>HP: <span id="hp">loading...</span></p>
+          <p>ATK: <span id="atk">loading...</span></p>
+          <p>DEF: <span id="def">loading...</span></p>
+          <p>SPD: <span id="spd">loading...</span></p>
+        </div>
+      </div>
+      <div id="menu">
+        <button id="quest_button" style="margin-bottom: 5px">クエスト</button>
+        <br />
+        <button id="skill" style="margin-bottom: 5px">スキル設定</button>
+        <br />
+        <button id="status_button" style="margin-bottom: 5px">ステータス割り振り</button>
+        <br />
+        <button id="equipment" style="margin-bottom: 5px">装備</button>
+        <br />
+        <button id="inv_button" style="margin-bottom: 5px">インベントリ</button>
+        <br />
+        <button id="setting" style="margin-bottom: 5px">設定</button>
+        <br />
+        <button id="" type="submit" disabled style="margin-bottom: 5px">ヘルプ</button>
+      </div>
+    </div>
+    <script src="./js/index.js" type="module"></script>
+    <script src="./js/global.js"></script>
+  </body>
+</html>
